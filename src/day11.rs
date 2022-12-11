@@ -161,7 +161,7 @@ pub fn day11() {
     let modulus: u64 = monkeys_step2.iter().map(|monkey: &Monkey| monkey.test.divisible_by)
         .product();
 
-    for round in 0..10000 {
+    for _ in 0..10000 {
         for index in 0..monkeys_step2.len() {
             let items = monkeys_step2[index].items.clone();
             monkeys_step2[index].items = vec![];
